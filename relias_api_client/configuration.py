@@ -13,6 +13,7 @@
 
 from __future__ import absolute_import
 
+import os
 import copy
 import logging
 import multiprocessing
@@ -40,15 +41,23 @@ class Configuration(object):
             return
 
         # Default Base url
-        self.host = "https://localhost"
+        self.host = os.environ['RELIAS_API_HOST']
         # Temp file folder for downloading files
         self.temp_folder_path = None
 
         # Authentication Settings
+        # Store the access_token for API calls
+        self.access_token = None
         # dict to store API key(s)
-        self.api_key = {}
-        # dict to store API prefix (e.g. Bearer)
-        self.api_key_prefix = {}
+        self.api_key = {'Authorization': self.access_token}
+        self.api_credentials = {
+            "key": os.environ['RELIAS_API_KEY'],
+            "token": os.environ['RELIAS_API_TOKEN']
+        }
+
+        self.org_id = os.environ["RELIAS_ORG_ID"]
+        # API prefix (e.g. Bearer)
+        self.api_key_prefix = {"Authorization": "Bearer"}
         # function to refresh API key if expired
         self.refresh_api_key_hook = None
         # Username for HTTP basic authentication
@@ -97,7 +106,7 @@ class Configuration(object):
         self.safe_chars_for_path_param = ''
 
         # Disable client side validation
-        self.client_side_validation = True
+        self.client_side_validation = False
 
     @classmethod
     def set_default(cls, default):
@@ -232,7 +241,11 @@ class Configuration(object):
         :return: The Auth Settings information dict.
         """
         return {
-
+            "authorization": {
+                "in": "header",
+                "key": "Authorization",
+                "value": self.get_api_key_with_prefix('Authorization'),
+            }
         }
 
     def to_debug_report(self):

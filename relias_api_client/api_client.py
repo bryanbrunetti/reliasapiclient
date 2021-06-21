@@ -74,8 +74,9 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Swagger-Codegen/1.0.0/python'
+        self.user_agent = 'ReliasAPIClient/1.0.0/python'
         self.client_side_validation = configuration.client_side_validation
+        self.get_access_token()
 
     def __del__(self):
         if self._pool is not None:
@@ -132,6 +133,10 @@ class ApiClient(object):
                 )
 
         # query parameters
+        org_id = [item for item in query_params if item[0] == "OrgId"]
+        if not org_id:
+            query_params.append(('orgId', self.configuration.org_id))
+
         if query_params:
             query_params = self.sanitize_for_serialization(query_params)
             query_params = self.parameters_to_tuples(query_params,
@@ -499,7 +504,7 @@ class ApiClient(object):
         :param auth_settings: Authentication setting identifiers list.
         """
         if not auth_settings:
-            return
+            auth_settings = self.configuration.auth_settings()
 
         for auth in auth_settings:
             auth_setting = self.configuration.auth_settings().get(auth)
@@ -514,6 +519,12 @@ class ApiClient(object):
                     raise ValueError(
                         'Authentication token must be in `query` or `header`'
                     )
+
+    def get_access_token(self):
+        from . import AuthenticationApi
+        authentication_api = AuthenticationApi(api_client=self)
+        response = authentication_api.authenticate(credentials=self.configuration.api_credentials)
+        self.configuration.api_key['Authorization'] = response.access_token
 
     def __deserialize_file(self, response):
         """Deserializes body to file

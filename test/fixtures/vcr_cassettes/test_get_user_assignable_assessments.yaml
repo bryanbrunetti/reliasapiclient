@@ -1,0 +1,202 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - XXXXXXOMITTEDXXXXXXX
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ReliasAPIClient/1.0.0/python
+    method: GET
+    uri: https://sandbox-assessmentsapi.reliaslearning.com/v1/users/test%40dka.im/assignable-assessments?orgId=12345
+  response:
+    body:
+      string: '{"items":[{"assessmentId":1219,"name":"Advance Healthcare Directives","assessmentType":"Clinical"},{"assessmentId":1210,"name":"Age-Specific
+        Patient Care","assessmentType":"Clinical"},{"assessmentId":1205,"name":"Body
+        Mechanics/Ergonomics","assessmentType":"Clinical"},{"assessmentId":1372,"name":"Cardiac
+        Cath Lab","assessmentType":"Self"},{"assessmentId":1689,"name":"Cardiac Cath
+        Lab RN A","assessmentType":"Clinical"},{"assessmentId":1690,"name":"Cardiac
+        Cath Lab RN B","assessmentType":"Clinical"},{"assessmentId":1481,"name":"Cardiac
+        Progressive Care/Telemetry","assessmentType":"Self"},{"assessmentId":1373,"name":"Cardiovascular
+        Technician","assessmentType":"Self"},{"assessmentId":2754,"name":"Case Manager
+        RN A v1","assessmentType":"Clinical"},{"assessmentId":1518,"name":"Case Manager
+        RN B","assessmentType":"Clinical"},{"assessmentId":1374,"name":"CAT SCAN Technologist","assessmentType":"Self"},{"assessmentId":1486,"name":"CCU","assessmentType":"Self"},{"assessmentId":932,"name":"CCU
+        Exam A v4","assessmentType":"Clinical"},{"assessmentId":933,"name":"CCU Exam
+        B v2","assessmentType":"Clinical"},{"assessmentId":1487,"name":"Certified
+        Anesthesia Technician","assessmentType":"Self"},{"assessmentId":1375,"name":"Certified
+        Occupational Therapist Assistant","assessmentType":"Self"},{"assessmentId":1413,"name":"Certified
+        Registered Nurse Anesthetist","assessmentType":"Self"},{"assessmentId":1447,"name":"Charge
+        RN","assessmentType":"Self"},{"assessmentId":1573,"name":"Charge RN A v1","assessmentType":"Clinical"},{"assessmentId":1177,"name":"Charge
+        RN B","assessmentType":"Clinical"},{"assessmentId":1395,"name":"Chemist","assessmentType":"Self"},{"assessmentId":1455,"name":"Clinic
+        RN (Primary Care)","assessmentType":"Self"},{"assessmentId":1326,"name":"Clinic
+        RN (Primary Care) A v1","assessmentType":"Clinical"},{"assessmentId":1165,"name":"Clinic
+        RN (Primary Care) B","assessmentType":"Clinical"},{"assessmentId":1436,"name":"Clinical
+        Nurse Manager","assessmentType":"Self"},{"assessmentId":1122,"name":"Clinical
+        Nurse Manager A v1","assessmentType":"Clinical"},{"assessmentId":1056,"name":"Clinical
+        Nurse Manager B","assessmentType":"Clinical"},{"assessmentId":1478,"name":"CNA","assessmentType":"Self"},{"assessmentId":1320,"name":"CNA
+        - Long Term Care A v1","assessmentType":"Clinical"},{"assessmentId":1321,"name":"CNA
+        - Long Term Care B v1","assessmentType":"Clinical"},{"assessmentId":2755,"name":"CNA
+        Acute Care A  v1","assessmentType":"Clinical"},{"assessmentId":1310,"name":"CNA
+        Acute Care B  v1","assessmentType":"Clinical"},{"assessmentId":1130,"name":"CNA
+        Sitter A","assessmentType":"Clinical"},{"assessmentId":1131,"name":"CNA Sitter
+        B","assessmentType":"Clinical"},{"assessmentId":1038,"name":"CNA-Home Health/Private
+        Duty_A v1","assessmentType":"Clinical"},{"assessmentId":1078,"name":"CNA-Home
+        Health/Private Duty_B v1","assessmentType":"Clinical"},{"assessmentId":1400,"name":"CNA-Sitter","assessmentType":"Self"},{"assessmentId":2716,"name":"Color
+        Vision Mandatory Exam v1","assessmentType":"Clinical"},{"assessmentId":1225,"name":"Core
+        Mandatory Part I","assessmentType":"Clinical"},{"assessmentId":1235,"name":"Core
+        Mandatory Part II (Allied)","assessmentType":"Clinical"},{"assessmentId":1236,"name":"Core
+        Mandatory Part II (Non-Licensed)","assessmentType":"Clinical"},{"assessmentId":1237,"name":"Core
+        Mandatory Part II (Nursing)","assessmentType":"Clinical"},{"assessmentId":1238,"name":"Core
+        Mandatory Part III","assessmentType":"Clinical"},{"assessmentId":1449,"name":"Corporate
+        Nurse","assessmentType":"Self"},{"assessmentId":1414,"name":"Corrections RN/LPN","assessmentType":"Self"},{"assessmentId":1211,"name":"Cultural
+        Competence","assessmentType":"Clinical"},{"assessmentId":1418,"name":"CVICU","assessmentType":"Self"},{"assessmentId":1173,"name":"CVICU
+        Exam A v5","assessmentType":"Clinical"},{"assessmentId":929,"name":"CVICU
+        Exam B v2","assessmentType":"Clinical"},{"assessmentId":1376,"name":"Dental
+        Hygienist/Assistant","assessmentType":"Self"},{"assessmentId":1357,"name":"Dialysis","assessmentType":"Self"},{"assessmentId":1457,"name":"Dietician","assessmentType":"Self"},{"assessmentId":1231,"name":"Do
+        Not Use Abbreviations","assessmentType":"Clinical"},{"assessmentId":1221,"name":"Domestic
+        Abuse/Intimate Partner Violence","assessmentType":"Clinical"},{"assessmentId":1450,"name":"Dosimetrist/Radiation
+        Therapy","assessmentType":"Self"},{"assessmentId":1338,"name":"Dysrhythmia
+        - Advanced A","assessmentType":"Clinical"},{"assessmentId":1339,"name":"Dysrhythmia
+        - Advanced B","assessmentType":"Clinical"},{"assessmentId":1340,"name":"Dysrhythmia
+        - Advanced with Measurements A","assessmentType":"Clinical"},{"assessmentId":1341,"name":"Dysrhythmia
+        - Advanced with Measurements B","assessmentType":"Clinical"},{"assessmentId":1348,"name":"Dysrhythmia
+        - Basic A","assessmentType":"Clinical"},{"assessmentId":1349,"name":"Dysrhythmia
+        - Basic B","assessmentType":"Clinical"},{"assessmentId":1121,"name":"Ebola","assessmentType":"Clinical"},{"assessmentId":1451,"name":"ECHO-Vascular
+        Technician","assessmentType":"Self"},{"assessmentId":1420,"name":"Emergency
+        Department RN","assessmentType":"Self"},{"assessmentId":1202,"name":"Emergency
+        Department RN A","assessmentType":"Clinical"},{"assessmentId":1329,"name":"Emergency
+        Department RN B v1","assessmentType":"Clinical"},{"assessmentId":1213,"name":"Emergency
+        Management Preparedness","assessmentType":"Clinical"},{"assessmentId":1464,"name":"EMT
+        (Emergency Medical Technician)","assessmentType":"Self"},{"assessmentId":1233,"name":"End
+        of Life Care","assessmentType":"Clinical"},{"assessmentId":1421,"name":"Endoscopy/GI
+        Lab","assessmentType":"Self"},{"assessmentId":1065,"name":"Endoscopy/GI Lab
+        Exam A v2","assessmentType":"Clinical"},{"assessmentId":900,"name":"Endoscopy/GI
+        Lab Exam B v1","assessmentType":"Clinical"},{"assessmentId":1206,"name":"Environmental
+        Safety","assessmentType":"Clinical"},{"assessmentId":1212,"name":"Ethics","assessmentType":"Clinical"},{"assessmentId":1234,"name":"Fall
+        Prevention","assessmentType":"Clinical"},{"assessmentId":1214,"name":"Fire
+        Safety","assessmentType":"Clinical"},{"assessmentId":1453,"name":"Flu Clinic","assessmentType":"Self"},{"assessmentId":1175,"name":"Foundations
+        of ECG Interpretation","assessmentType":"Clinical"},{"assessmentId":1442,"name":"General
+        ICU","assessmentType":"Self"},{"assessmentId":2799,"name":"General ICU RN
+        A","assessmentType":"Clinical"},{"assessmentId":2800,"name":"General ICU RN
+        B","assessmentType":"Clinical"},{"assessmentId":1383,"name":"General Progressive
+        Care Unit","assessmentType":"Self"},{"assessmentId":1370,"name":"Geriatric/LTC","assessmentType":"Self"},{"assessmentId":1207,"name":"Hazardous
+        Chemicals","assessmentType":"Clinical"},{"assessmentId":1185,"name":"HCAHPS
+        Overview","assessmentType":"Clinical"},{"assessmentId":1465,"name":"High Risk
+        OB Technician","assessmentType":"Self"},{"assessmentId":1208,"name":"HIPAA","assessmentType":"Clinical"},{"assessmentId":1415,"name":"Home
+        Health","assessmentType":"Self"},{"assessmentId":1574,"name":"Home Health
+        RN A v1","assessmentType":"Clinical"},{"assessmentId":1575,"name":"Home Health
+        RN B v1","assessmentType":"Clinical"},{"assessmentId":1432,"name":"Hospice
+        And Palliative CNA","assessmentType":"Self"},{"assessmentId":1492,"name":"Hospice
+        And Palliative LPN","assessmentType":"Self"},{"assessmentId":1491,"name":"Hospice
+        And Palliative RN","assessmentType":"Self"},{"assessmentId":2756,"name":"Hospice
+        RN A v1","assessmentType":"Clinical"},{"assessmentId":2757,"name":"Hospice
+        RN B v1","assessmentType":"Clinical"},{"assessmentId":1425,"name":"Immunization
+        Nurse","assessmentType":"Self"},{"assessmentId":1239,"name":"Infant Abduction
+        Prevention","assessmentType":"Clinical"},{"assessmentId":1209,"name":"Infection
+        Control/Bloodborne Pathogens","assessmentType":"Clinical"},{"assessmentId":2686,"name":"IV
+        Push Medications Competency Assessment A","assessmentType":"Clinical"},{"assessmentId":2687,"name":"IV
+        Push Medications Competency Assessment B","assessmentType":"Clinical"},{"assessmentId":1405,"name":"IV
+        Therapy","assessmentType":"Self"},{"assessmentId":2684,"name":"IV Therapy/Infusion
+        Competency Assessment A","assessmentType":"Clinical"},{"assessmentId":2685,"name":"IV
+        Therapy/Infusion Competency Assessment B","assessmentType":"Clinical"},{"assessmentId":1435,"name":"Labor
+        And Delivery","assessmentType":"Self"},{"assessmentId":1576,"name":"Labor
+        And Delivery RN A v1","assessmentType":"Clinical"},{"assessmentId":1585,"name":"Labor
+        And Delivery RN B v1","assessmentType":"Clinical"},{"assessmentId":1466,"name":"Laboratory
+        Technician","assessmentType":"Self"},{"assessmentId":1482,"name":"LPN - Ambulatory","assessmentType":"Self"},{"assessmentId":1584,"name":"LPN
+        - Long Term Care A v1","assessmentType":"Clinical"},{"assessmentId":1577,"name":"LPN
+        - Long Term Care B v1","assessmentType":"Clinical"},{"assessmentId":2758,"name":"LPN
+        Pharmacology_Acute A v1","assessmentType":"Clinical"},{"assessmentId":2759,"name":"LPN
+        Pharmacology_Acute B v1","assessmentType":"Clinical"},{"assessmentId":2760,"name":"LPN
+        Pharmacology_Long Term Care A  v1","assessmentType":"Clinical"},{"assessmentId":2761,"name":"LPN
+        Pharmacology_Long Term Care B v1","assessmentType":"Clinical"},{"assessmentId":2738,"name":"LPN/LVN
+        A","assessmentType":"Clinical"},{"assessmentId":1364,"name":"LPN/LVN Competency","assessmentType":"Self"},{"assessmentId":1280,"name":"LPN-Ambulatory
+        A","assessmentType":"Clinical"},{"assessmentId":1281,"name":"LPN-Ambulatory
+        B","assessmentType":"Clinical"},{"assessmentId":1396,"name":"Mammographer","assessmentType":"Self"},{"assessmentId":1378,"name":"Medical
+        Assistant","assessmentType":"Self"},{"assessmentId":1284,"name":"Medical Assistant
+        A v1","assessmentType":"Clinical"},{"assessmentId":1244,"name":"Medical Assistant
+        B","assessmentType":"Clinical"},{"assessmentId":1443,"name":"Medical Biller/Coder","assessmentType":"Self"},{"assessmentId":1428,"name":"Medical
+        Social Worker","assessmentType":"Self"},{"assessmentId":1490,"name":"Medical
+        Surgical","assessmentType":"Self"},{"assessmentId":2782,"name":"Medical Surgical
+        RN A","assessmentType":"Clinical"},{"assessmentId":2783,"name":"Medical Surgical
+        RN B","assessmentType":"Clinical"},{"assessmentId":1446,"name":"Medical Surgical-Telemetry","assessmentType":"Self"},{"assessmentId":1578,"name":"Medical
+        Surgical-Telemetry A v1","assessmentType":"Clinical"},{"assessmentId":1171,"name":"Medical
+        Surgical-Telemetry B","assessmentType":"Clinical"},{"assessmentId":1040,"name":"Medical
+        Terminology","assessmentType":"Clinical"},{"assessmentId":1406,"name":"Medication
+        Aide","assessmentType":"Self"},{"assessmentId":1299,"name":"Medication Aide
+        LTC Exam A","assessmentType":"Clinical"},{"assessmentId":1300,"name":"Medication
+        Aide LTC Exam B","assessmentType":"Clinical"},{"assessmentId":1220,"name":"Moderate
+        (Conscious) Sedation","assessmentType":"Clinical"},{"assessmentId":1439,"name":"Mother
+        Baby","assessmentType":"Self"},{"assessmentId":1086,"name":"Mother Baby A
+        v2","assessmentType":"Clinical"},{"assessmentId":1142,"name":"Mother Baby
+        B v1","assessmentType":"Clinical"},{"assessmentId":1427,"name":"MRI Technologist
+        v2","assessmentType":"Self"},{"assessmentId":1422,"name":"Neuro ICU","assessmentType":"Self"},{"assessmentId":1068,"name":"Neuro
+        ICU Exam A v4","assessmentType":"Clinical"},{"assessmentId":931,"name":"Neuro
+        ICU Exam B v2","assessmentType":"Clinical"},{"assessmentId":901,"name":"Neuro
+        Progressive Care Exam A v1","assessmentType":"Clinical"},{"assessmentId":902,"name":"Neuro
+        Progressive Care Exam B v1","assessmentType":"Clinical"},{"assessmentId":1488,"name":"Neuro
+        Progressive Care Unit","assessmentType":"Self"},{"assessmentId":1365,"name":"NICU","assessmentType":"Self"},{"assessmentId":2762,"name":"NICU
+        RN A v1","assessmentType":"Clinical"},{"assessmentId":2763,"name":"NICU RN
+        B v1","assessmentType":"Clinical"},{"assessmentId":1227,"name":"NPSG - Allied","assessmentType":"Clinical"},{"assessmentId":1228,"name":"NPSG
+        - Non-Licensed","assessmentType":"Clinical"},{"assessmentId":1226,"name":"NPSG
+        - Nursing","assessmentType":"Clinical"},{"assessmentId":1417,"name":"Nuclear
+        Medicine Technologist","assessmentType":"Self"},{"assessmentId":1334,"name":"Nurse
+        Educator A","assessmentType":"Clinical"},{"assessmentId":1335,"name":"Nurse
+        Educator B","assessmentType":"Clinical"},{"assessmentId":1380,"name":"Nurse
+        Practitioner","assessmentType":"Self"},{"assessmentId":1468,"name":"Occupational
+        Health Nurse","assessmentType":"Self"},{"assessmentId":1484,"name":"Occupational
+        Therapist","assessmentType":"Self"},{"assessmentId":939,"name":"Occupational
+        Therapy Exam A v2","assessmentType":"Clinical"},{"assessmentId":884,"name":"Occupational
+        Therapy Exam B v1","assessmentType":"Clinical"},{"assessmentId":1381,"name":"Oncology","assessmentType":"Self"},{"assessmentId":1671,"name":"Oncology
+        RN A","assessmentType":"Clinical"},{"assessmentId":1672,"name":"Oncology RN
+        B","assessmentType":"Clinical"},{"assessmentId":1424,"name":"Operating Room
+        - Cardiovascular RN","assessmentType":"Self"},{"assessmentId":1480,"name":"Operating
+        Room - Cardiovascular Surgical Tech","assessmentType":"Self"},{"assessmentId":1483,"name":"Operating
+        Room - Circulating","assessmentType":"Self"},{"assessmentId":1493,"name":"Operating
+        Room - First Assist","assessmentType":"Self"},{"assessmentId":1440,"name":"Operating
+        Room - RN","assessmentType":"Self"},{"assessmentId":2764,"name":"Operating
+        Room RN A v2","assessmentType":"Clinical"},{"assessmentId":1662,"name":"Operating
+        Room RN B","assessmentType":"Clinical"},{"assessmentId":1458,"name":"Operating
+        Room- Scrub","assessmentType":"Self"},{"assessmentId":1469,"name":"Orthopedic","assessmentType":"Self"},{"assessmentId":1204,"name":"OSHA
+        Module","assessmentType":"Clinical"},{"assessmentId":1441,"name":"PACU - RN","assessmentType":"Self"},{"assessmentId":2765,"name":"PACU
+        RN A v1","assessmentType":"Clinical"},{"assessmentId":2766,"name":"PACU RN
+        B v1","assessmentType":"Clinical"},{"assessmentId":1222,"name":"Pain Management","assessmentType":"Clinical"},{"assessmentId":1470,"name":"Paramedic","assessmentType":"Self"},{"assessmentId":1224,"name":"Patient
+        Restraints and Seclusion","assessmentType":"Clinical"},{"assessmentId":1216,"name":"Patient
+        Rights","assessmentType":"Clinical"},{"assessmentId":1218,"name":"Patient
+        Safety Systems and Events","assessmentType":"Clinical"},{"assessmentId":1394,"name":"Patient
+        Transport","assessmentType":"Self"},{"assessmentId":2724,"name":"Pediatric
+        Pharmacology A","assessmentType":"Clinical"},{"assessmentId":2725,"name":"Pediatric
+        Pharmacology B","assessmentType":"Clinical"},{"assessmentId":2767,"name":"Pediatric
+        RN A v1","assessmentType":"Clinical"},{"assessmentId":2768,"name":"Pediatric
+        RN B v1","assessmentType":"Clinical"},{"assessmentId":1363,"name":"PEDS","assessmentType":"Self"},{"assessmentId":1663,"name":"Personal
+        Home Care Aide A","assessmentType":"Clinical"},{"assessmentId":1384,"name":"Pharmacist","assessmentType":"Self"},{"assessmentId":1463,"name":"Pharmacy
+        Technician","assessmentType":"Self"},{"assessmentId":1385,"name":"Phlebotomy","assessmentType":"Self"},{"assessmentId":1485,"name":"Physical
+        Therapist","assessmentType":"Self"},{"assessmentId":1387,"name":"Physical
+        Therapist Assistant","assessmentType":"Self"},{"assessmentId":947,"name":"Physical
+        Therapy Exam A v2","assessmentType":"Clinical"},{"assessmentId":948,"name":"Physical
+        Therapy Exam B v2","assessmentType":"Clinical"},{"assessmentId":1473,"name":"Physician
+        Assistant","assessmentType":"Self"},{"assessmentId":1393,"name":"Physicist
+        Proficiency","assessmentType":"Self"},{"assessmentId":1368,"name":"PICU","assessmentType":"Self"},{"assessmentId":1474,"name":"Polysomnographer
+        (EEG) Technologist","assessmentType":"Self"},{"assessmentId":1369,"name":"Post
+        Partum","assessmentType":"Self"},{"assessmentId":1445,"name":"Preceptor RN","assessmentType":"Self"}],"pageCount":2,"pageNumber":1,"totalCount":255,"links":{"previous":null,"next":"https://sandbox-assessmentsapi.reliaslearning.com/v1/users/test@dka.im/assignable-assessments?orgId=12345&PageNumber=2&PageSize=200"}}'
+    headers:
+      Content-Length:
+      - '16114'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 21 Jun 2021 19:30:46 GMT
+      Request-Context:
+      - appId=cid-v1:f0f5ff04-6fcc-440f-86c6-da68012a0299
+      Server:
+      - Microsoft-IIS/10.0
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+version: 1

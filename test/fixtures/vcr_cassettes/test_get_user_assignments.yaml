@@ -1,0 +1,37 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - XXXXXXOMITTEDXXXXXXX
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ReliasAPIClient/1.0.0/python
+    method: GET
+    uri: https://sandbox-assessmentsapi.reliaslearning.com/v1/users/test%40dka.im/assignments?orgId=12345
+  response:
+    body:
+      string: '{"items":[{"assignmentId":3800326,"assessment":{"assessmentId":1215,"assessmentType":"Clinical","name":"Abuse:
+        Child, Elder, Intimate Partner"},"expiration":"2021-06-21T23:59:59","completed":null,"lastAccessed":null,"grade":null,"band":null}],"pageCount":1,"pageNumber":1,"totalCount":1,"links":{"previous":null,"next":null}}'
+    headers:
+      Content-Length:
+      - '325'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 21 Jun 2021 19:29:02 GMT
+      Request-Context:
+      - appId=cid-v1:f0f5ff04-6fcc-440f-86c6-da68012a0299
+      Server:
+      - Microsoft-IIS/10.0
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+version: 1

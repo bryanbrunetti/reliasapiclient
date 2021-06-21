@@ -17,6 +17,7 @@ import unittest
 
 import relias_api_client
 from relias_api_client.api.departments_api import DepartmentsApi  # noqa: E501
+from test.helpers.vcr import vcr
 from relias_api_client.rest import ApiException
 
 
@@ -29,6 +30,7 @@ class TestDepartmentsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    @vcr.use_cassette
     def test_get_departments(self):
         """Test case for get_departments
 

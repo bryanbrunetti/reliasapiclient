@@ -1,0 +1,38 @@
+interactions:
+- request:
+    body: '{"first_name": "Barry", "last_name": "Manilow", "email": "barry@dka.im",
+      "tracking_id": "ABC!@#"}'
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - XXXXXXOMITTEDXXXXXXX
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ReliasAPIClient/1.0.0/python
+    method: POST
+    uri: https://sandbox-assessmentsapi.reliaslearning.com/v1/applicants?orgId=12345
+  response:
+    body:
+      string: '{"type":"https://httpstatuses.com/403","title":"Forbidden","status":403,"detail":"You
+        do not have permission to perform this action.","instance":"80003e48-0000-dd00-b63f-84710c7967bb"}'
+    headers:
+      Content-Length:
+      - '184'
+      Content-Type:
+      - application/problem+json; charset=utf-8
+      Date:
+      - Mon, 21 Jun 2021 19:48:17 GMT
+      Request-Context:
+      - appId=cid-v1:f0f5ff04-6fcc-440f-86c6-da68012a0299
+      Server:
+      - Microsoft-IIS/10.0
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 403
+      message: Forbidden
+version: 1

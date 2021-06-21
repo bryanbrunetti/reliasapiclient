@@ -15,6 +15,10 @@ from __future__ import absolute_import
 
 import unittest
 
+import dateutil.utils
+
+from test.helpers.vcr import vcr
+
 import relias_api_client
 from relias_api_client.api.assignments_api import AssignmentsApi  # noqa: E501
 from relias_api_client.rest import ApiException
@@ -29,19 +33,29 @@ class TestAssignmentsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    @vcr.use_cassette
     def test_create_assignments_for_user(self):
         """Test case for create_assignments_for_user
 
         Assigns multiple assessments to one user  # noqa: E501
         """
-        pass
+        api_instance = relias_api_client.AssignmentsApi()
+        todays_date = dateutil.utils.today()
+        assignments = relias_api_client.CreateAssignmentRequest(assessment_ids=[1449], expiration=todays_date)
+        result = api_instance.create_assignments_for_user("test@dka.im", assignments)
+        self.assertEqual(result[0].assessment_id, 1449)
 
+    @vcr.use_cassette
     def test_get_user_assignments(self):
         """Test case for get_user_assignments
 
         Retrieves a paginated list of assignments for the provided username  # noqa: E501
         """
-        pass
+        api_instance = relias_api_client.AssignmentsApi()
+        result = api_instance.get_user_assignments(username="test@dka.im")
+        self.assertEqual(result.items[0].assessment.assessment_id, 1215)
+        self.assertEqual(result.items[0].assessment.name, "Abuse: Child, Elder, Intimate Partner")
+
 
     def test_get_users_behavioral_assignment(self):
         """Test case for get_users_behavioral_assignment

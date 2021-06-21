@@ -15,6 +15,8 @@ from __future__ import absolute_import
 
 import unittest
 
+from test.helpers.vcr import vcr
+
 import relias_api_client
 from relias_api_client.api.assessments_api import AssessmentsApi  # noqa: E501
 from relias_api_client.rest import ApiException
@@ -29,12 +31,15 @@ class TestAssessmentsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    @vcr.use_cassette
     def test_get_user_assignable_assessments(self):
         """Test case for get_user_assignable_assessments
 
         Retrieves a paginated list of assignable assessments for the user corresponding to the username provided  # noqa: E501
         """
-        pass
+        api_instance = relias_api_client.AssessmentsApi(relias_api_client.ApiClient())
+        result = api_instance.get_user_assignable_assessments("test@dka.im")
+        self.assertEqual(result.total_count, 255)
 
 
 if __name__ == '__main__':

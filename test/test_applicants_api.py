@@ -15,6 +15,8 @@ from __future__ import absolute_import
 
 import unittest
 
+from test.helpers.vcr import vcr
+
 import relias_api_client
 from relias_api_client.api.applicants_api import ApplicantsApi  # noqa: E501
 from relias_api_client.rest import ApiException
@@ -36,12 +38,29 @@ class TestApplicantsApi(unittest.TestCase):
         """
         pass
 
+    @vcr.use_cassette
     def test_create_applicant(self):
         """Test case for create_applicant
 
         Creates an applicant with the supplied information  # noqa: E501
         """
-        pass
+
+        new_applicant = relias_api_client.models.create_applicant_request.CreateApplicantRequest(
+            first_name="Barry",
+            last_name="Manilow",
+            email="barry@dka.im",
+            tracking_id="ABC123",
+            guid="ABC123"
+        )
+        api_client = relias_api_client.api.applicants_api.ApplicantsApi(
+            relias_api_client.ApiClient()
+        )
+        result = api_client.create_applicant({
+            "first_name": "Barry",
+            "last_name": "Manilow",
+            "email": "barry@dka.im",
+            "tracking_id": "ABC!@#"
+        })
 
     def test_get_applicant(self):
         """Test case for get_applicant

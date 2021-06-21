@@ -1,0 +1,36 @@
+interactions:
+- request:
+    body: '{"assessmentIds": [1449], "expiration": "2021-06-21T00:00:00"}'
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - XXXXXXOMITTEDXXXXXXX
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ReliasAPIClient/1.0.0/python
+    method: POST
+    uri: https://sandbox-assessmentsapi.reliaslearning.com/v1/users/test%40dka.im/assignments?orgId=12345
+  response:
+    body:
+      string: '[{"assignmentId":3800327,"userId":18461195,"expiration":"2021-06-21T23:59:59","assessmentId":1449}]'
+    headers:
+      Content-Length:
+      - '99'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 21 Jun 2021 19:34:33 GMT
+      Request-Context:
+      - appId=cid-v1:f0f5ff04-6fcc-440f-86c6-da68012a0299
+      Server:
+      - Microsoft-IIS/10.0
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -39,24 +39,18 @@ import relias_api_client
 Please follow the [installation procedure](#installation--usage) and then run the following:
 
 ```python
-from __future__ import print_function
-import time
 import relias_api_client
-from relias_api_client.rest import ApiException
-from pprint import pprint
 
-# create an instance of the API class
-api_instance = relias_api_client.ApplicantsApi(relias_api_client.ApiClient(configuration))
-username = 'atravelnurse@nomadhealth.com' # str | The username of the applicant to convert to a learner.
-request = relias_api_client.ConvertToLearnerRequest() # ConvertToLearnerRequest | The applicant's new username.
-org_id = 56 # int | organization ID of the applicant (defaults to current organization ID) (optional)
+# Create an instance of the Assignment API class
+api_instance = relias_api_client.AssignmentsApi()
+username = 'atravelnurse@nomadhealth.com' # str | The username (email) of the applicant.
+# Get a list of assignable assessments for a user:
+assessments = api_instance.get_user_assignments(username)
 
-try:
-    # Converts an applicant based on the username provided to a learner with the new username supplied
-    api_instance.convert_to_learner(username, request, org_id=org_id)
-except ApiException as e:
-    print("Exception when calling ApplicantsApi->convert_to_learner: %s\n" % e)
-
+# Create an assessment for a user:
+assignments = relias_api_client.CreateAssignmentRequest(assessment_ids=[1449], expiration=todays_date)
+api_instance.create_assignments_for_user(username, assignments)
+# [{"assignmentId":3800327,"userId":18461195,"expiration":"2021-06-21T23:59:59","assessmentId":1449}]'
 ```
 
 ## Documentation for API Endpoints

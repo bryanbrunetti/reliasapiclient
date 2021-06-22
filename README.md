@@ -55,7 +55,7 @@ api_instance.create_assignments_for_user(username, assignments)
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *https://assessmentsapi.reliaslearning.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

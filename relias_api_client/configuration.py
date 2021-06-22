@@ -55,7 +55,7 @@ class Configuration(object):
             "token": os.environ['RELIAS_API_TOKEN']
         }
 
-        self.org_id = os.environ["RELIAS_ORG_ID"]
+        self.org_id = os.environ["RELIAS_ORG_ID"] or '12345'
         # API prefix (e.g. Bearer)
         self.api_key_prefix = {"Authorization": "Bearer"}
         # function to refresh API key if expired

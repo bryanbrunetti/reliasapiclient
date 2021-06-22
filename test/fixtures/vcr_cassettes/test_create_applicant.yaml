@@ -1,7 +1,7 @@
 interactions:
 - request:
-    body: '{"first_name": "Barry", "last_name": "Manilow", "email": "barry@dka.im",
-      "tracking_id": "ABC!@#"}'
+    body: '{"firstName": "Jim", "lastName": "Morrison", "orgId": "22970", "email":
+      "jim@dka.im", "trackingId": "EGL9711", "guid": "EGL9711"}'
     headers:
       Accept:
       - application/json
@@ -12,18 +12,19 @@ interactions:
       User-Agent:
       - ReliasAPIClient/1.0.0/python
     method: POST
-    uri: https://sandbox-assessmentsapi.reliaslearning.com/v1/applicants?orgId=12345
+    uri: https://sandbox-assessmentsapi.reliaslearning.com/v1/applicants?orgId=22970
   response:
     body:
-      string: '{"type":"https://httpstatuses.com/403","title":"Forbidden","status":403,"detail":"You
-        do not have permission to perform this action.","instance":"80003e48-0000-dd00-b63f-84710c7967bb"}'
+      string: '{"applicantId":18461378,"orgId":22970,"firstName":"Jim","lastName":"Morrison","userName":"jim@dka.im","email":"jim@dka.im","jobTitleIds":[],"trackingId":"EGL9711","active":true,"guid":"EGL9711"}'
     headers:
       Content-Length:
-      - '184'
+      - '194'
       Content-Type:
-      - application/problem+json; charset=utf-8
+      - application/json; charset=utf-8
       Date:
-      - Mon, 21 Jun 2021 19:48:17 GMT
+      - Tue, 22 Jun 2021 19:54:56 GMT
+      Location:
+      - https://sandbox-assessmentsapi.reliaslearning.com/v1/applicants/jim@dka.im?orgId=22970
       Request-Context:
       - appId=cid-v1:f0f5ff04-6fcc-440f-86c6-da68012a0299
       Server:
@@ -33,6 +34,6 @@ interactions:
       X-Powered-By:
       - ASP.NET
     status:
-      code: 403
-      message: Forbidden
+      code: 201
+      message: Created
 version: 1

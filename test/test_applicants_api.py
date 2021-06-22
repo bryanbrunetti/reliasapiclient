@@ -13,6 +13,7 @@
 
 from __future__ import absolute_import
 
+import os
 import unittest
 
 from test.helpers.vcr import vcr
@@ -46,21 +47,21 @@ class TestApplicantsApi(unittest.TestCase):
         """
 
         new_applicant = relias_api_client.models.create_applicant_request.CreateApplicantRequest(
-            first_name="Barry",
-            last_name="Manilow",
-            email="barry@dka.im",
-            tracking_id="ABC123",
-            guid="ABC123"
+            first_name="Jim",
+            last_name="Morrison",
+            email="jim@dka.im",
+            guid="EGL9711",
+            org_id=relias_api_client.Configuration().org_id,
+            tracking_id="EGL9711"
         )
-        api_client = relias_api_client.api.applicants_api.ApplicantsApi(
-            relias_api_client.ApiClient()
-        )
-        result = api_client.create_applicant({
-            "first_name": "Barry",
-            "last_name": "Manilow",
-            "email": "barry@dka.im",
-            "tracking_id": "ABC!@#"
-        })
+        api_client = relias_api_client.ApplicantsApi()
+        result = api_client.create_applicant(new_applicant)
+        self.assertTrue(result.active)
+        self.assertIsNotNone(result.applicant_id)
+        self.assertEqual(result.guid, new_applicant.guid)
+        self.assertEqual(result.tracking_id, new_applicant.tracking_id)
+        self.assertEqual(result.user_name, new_applicant.email)
+
 
     def test_get_applicant(self):
         """Test case for get_applicant
